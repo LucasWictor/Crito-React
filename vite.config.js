@@ -11,7 +11,8 @@ export default defineConfig({
   resolve: {
     alias: {
       '@components': path.resolve(__dirname, 'src/components'),
-      '@images': path.resolve(__dirname, 'src/assets/images')
+      '@images': path.resolve(__dirname, 'src/assets/images'),
+      '@generics': path.resolve(__dirname, 'src/generics/button')
     }
   }
 })

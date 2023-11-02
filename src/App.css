@@ -12,9 +12,9 @@ body {
 .btn-learnmore {
   background-color: #F9D783;
   border: 1px solid #F9D783;
-  padding: 15px 160px;
+  padding: 15px 130px;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 15px;
   border-radius: 25px;
   color: #191919;
   text-decoration: none;
@@ -341,7 +341,7 @@ header .menu nav a.active::after, header .menu nav a:hover::after {
   margin-right: 60px;
 }
 .feature-section .section-title h2 {
-  font-size: 50px;
+  font-size: 40px;
   margin-bottom: 40px;
 }
 .feature-section .feature-box {
@@ -459,7 +459,7 @@ header .menu nav a.active::after, header .menu nav a:hover::after {
 .aboutus-section .container .aboutbox .featurebox .section-title .learn-more-and-video .introvideo .playbutton {
   margin-left: 20px;
   margin-right: 10px;
-  font-size: 40px;
+  font-size: 35px;
   color: #191919;
 }
 .aboutus-section .container .aboutbox .featurebox .section-title .learn-more-and-video .introvideo p {
