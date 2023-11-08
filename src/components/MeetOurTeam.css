@@ -1,0 +1,93 @@
+
+.meetteam-section {
+    background-color: #F0D082;
+    padding-bottom: 100px;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  
+  .section-title {
+    padding-top: 70px;
+    padding-bottom: 40px;
+  }
+  @media (min-width: 768px) {
+    .section-title {
+      padding-top: 120px;
+      padding-bottom: 90px;
+    }
+  }
+  .section-title p {
+    color: #F94D1c;
+    margin-bottom: 10px;
+  }
+  .section-title h2 {
+    color: #191919;
+    font-family: "DM sans", sans-serif;
+    font-weight: 700;
+    font-size: 45px;
+  }
+  
+
+  .team-carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .member {
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease;
+    margin: 0 10px;
+  }
+  
+  .member img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .member h3 {
+    font-weight: 600;
+    font-size: 18px;
+    color: #333;
+    margin: 10px 0;
+  }
+  
+  .member p {
+    font-size: 14px;
+    color: #777;
+  }
+  
+
+  .member.active {
+    transform: scale(1.05);
+  }
+  
+
+  .carousel-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+
+  .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #999;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+
+  .dot.active {
+    background-color: #333;
+  }
