@@ -9,6 +9,9 @@ import AboutCompany from '@components/AboutCompany'
 import WhyUs from '@components/WhyUs'
 import ProjectCases from '@components/ProjectCases'
 import MeetOurTeam from '@components/MeetOurTeam'
+import Testimonial from '@components/Testimonial'
+import ArticlesSection from '@components/ArticlesSection'
+
 
 
 
@@ -25,7 +28,9 @@ const Home = () => {
     <WhyUs />
     <ProjectCases/>
     <MeetOurTeam/>
-    <Footer />
+    <Testimonial/>
+    <ArticlesSection/>
+    <Footer/>
     </>
   )
 }

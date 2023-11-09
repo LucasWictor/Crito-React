@@ -42,6 +42,7 @@ const MeetOurTeam = () => {
     const interval = setInterval(() => {
       setCurrentMemberIndex((currentMemberIndex + 1) % teamMembers.length);
     }, 5000);
+
     return () => {
       clearInterval(interval);
     };
@@ -79,7 +80,6 @@ const MeetOurTeam = () => {
         </div>
       </div>
     </section>
-    
   );
 };
 
