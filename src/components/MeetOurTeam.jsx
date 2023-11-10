@@ -48,6 +48,7 @@ const MeetOurTeam = () => {
     };
   }, [currentMemberIndex, teamMembers.length]);
 
+  
   return (
     <section className="meetteam-section">
       <div className="container">

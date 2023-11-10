@@ -743,7 +743,9 @@ header .menu nav a.active::after, header .menu nav a:hover::after {
   background-color: #191919;
 }
 .testimonial {
-  margin-top: 10px;
+  background-color: #F0D082;
+  padding-bottom: 50px;
+
 }
 .testimonial .container {
   background-color: #FFFFFF;
@@ -817,46 +819,87 @@ header .menu nav a.active::after, header .menu nav a:hover::after {
 }
 .articles-section {
   position: relative;
-  /* Media Query article and news */
 }
+
 .articles-section .container .section-title {
   text-align: left;
 }
+
 .articles-section .container .section-title p {
   font-size: 20px;
 }
+
 .articles-section .container .section-title h2 {
   display: flex;
 }
+
 .articles-section .container .browseteam {
   content: "";
   position: absolute;
   top: 22%;
   right: 25%;
 }
+
 .articles-section .container .article-box {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
-.articles-section .container .article-box .article-pic:hover {
-  transform: scale(1.05);
-  transition: 0.3s ease;
-}
-.articles-section .container .guide-box {
+
+.articles-section .container .article-box .guide-box {
+  position: relative;
   width: 30%;
   margin-right: 2%;
   margin-bottom: 20px;
 }
-.articles-section .container .guide-box p {
+
+.articles-section .container .article-box .guide-box p {
   margin-top: 30px;
   margin-bottom: 30px;
   color: #535353;
 }
-.articles-section .container .guide-box h3 {
+
+.articles-section .container .article-box .guide-box h3 {
   font-family: "DM sans", sans-serif;
   font-weight: 600;
 }
+
+.articles-section .container .article-box .article-pic-container {
+  position: relative;
+}
+
+.articles-section .container .article-box .article-pic {
+  overflow: hidden;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  max-height: 240px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.articles-section .container .article-box .article-pic:hover {
+  transform: scale(1.05);
+}
+
+.articles-section .container .article-box .published-corner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: yellow;
+  color: black;
+  padding: 5px;
+  font-size: 12px;
+  border-radius: 0 0 0 10px; /* Adjust border-radius to fit your design */
+}
+
+.articles-section .container .article-box .published-corner p {
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .articles-section .container .carousel {
   display: flex;
   align-items: center;
@@ -864,6 +907,7 @@ header .menu nav a.active::after, header .menu nav a:hover::after {
   margin-top: 10px;
   margin-bottom: 50px;
 }
+
 .articles-section .container .carousel .dot {
   width: 10px;
   height: 10px;
@@ -873,22 +917,29 @@ header .menu nav a.active::after, header .menu nav a:hover::after {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
+
 .articles-section .container .carousel .dot.active {
   background-color: #191919;
 }
+
 @media (max-width: 992px) {
   .articles-section .container .guide-box {
     width: 100%;
     margin-right: 0;
   }
+
   .articles-section .container .carousel {
     margin-top: 20px;
     margin-bottom: 20px;
   }
+
   .articles-section .container .browseteam {
     display: none;
   }
 }
+
+
+
 
 .newsletter {
   background-color: #F0EFE9;
