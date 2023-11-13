@@ -1,0 +1,155 @@
+.wrapper-grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto 1fr auto;
+}
+
+header {
+	background-color: #F0EFE9;
+	padding: 16px;
+
+	.container {
+		display: grid;
+		align-items: center;
+		grid-template-columns: 1fr auto;
+		grid-template-areas: "logo bars";
+
+		@media (min-width: 992px) {
+			grid-template-columns: auto 1fr auto;
+			grid-template-areas:
+				"logo cib social"
+				"logo menu menu";
+		}
+	}
+
+	.btn-menubars {
+		grid-area: bars;
+		border: none;
+		font-size: 25px;
+		background-color: transparent;
+
+		@media (min-width: 992px) {
+			display: none;
+		}
+	}
+
+	.logotype {
+		grid-area: logo;
+		margin-right: 70px;
+
+		@media (min-width: 1200px) {
+			display: flex;
+		}
+	}
+
+	.contactinformation-bar {
+		grid-area: cib;
+		display: none;
+		justify-content: flex-start;
+		align-items: center;
+
+		@media (min-width: 1200px) {
+			display: flex;
+		}
+
+		.content-box {
+			margin-right: 30px;
+			padding-right: 30px;
+			border-right: 1px solid #DAD9D3;
+			font-family: 'Inter', sans-serif;
+			font-size: 15px;
+			font-weight: 300;
+
+			i {
+				margin-right: 5px;
+				font-size: 1.2em;
+				color: #191919;
+			}
+
+			&.last {
+				border: none;
+			}
+		}
+
+		.content-box:last-child {
+			border-right: none;
+		}
+	}
+
+	.socialmedia-bar {
+		grid-area: social;
+		display: none;
+
+		@media (min-width: 992px) {
+			display: flex;
+		}
+
+		a {
+			color: #191919;
+			text-decoration: none;
+			font-size: 1.3rem;
+			margin-left: 12px;
+		}
+	}
+
+	.menu {
+		grid-area: menu;
+		display: none;
+		justify-content: space-between;
+		align-items: center;
+		border-top: 1px solid #DAD9D3;
+		margin-top: 10px;
+		padding-top: 10px;
+
+		@media (min-width: 992px) {
+			display: flex;
+		}
+
+		.btn-login {
+			padding-top: 12px;
+			padding-bottom: 12px;
+			text-decoration: none;
+
+		}
+	}
+
+	.menu nav a {
+		display: inline-block;
+		color: #191919;
+		text-decoration: none;
+		margin-right: 35px;
+		position: relative;
+
+		&.active {
+			font-weight: 500;
+		}
+
+		&.active::after,
+		&:hover::after {
+			content: '';
+			position: absolute;
+			font-weight: 500;
+			height: 2px;
+			width: 15px;
+			background-color: #191919;
+			left: 50%;
+			bottom: -3px;
+			transform: translate(calc(50% - 15px));
+		}
+	}
+}
+
+.searchbox {
+	background-color: #f3f3f3;
+	display: inline-block;
+	border-radius: 25px;
+	padding: 8px 20px;
+
+	input {
+		background-color: transparent;
+		border: none;
+		outline: none;
+		font-size: 0.8em;
+
+	}
+}

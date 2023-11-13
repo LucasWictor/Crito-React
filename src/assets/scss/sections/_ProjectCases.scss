@@ -1,0 +1,90 @@
+.project-section {
+    .container {
+        .section-title-p {
+            margin-top: 100px;
+            text-align: center;
+            margin-bottom: 100px;
+
+            p {
+                color: #F94D1c;
+                margin-bottom: 10px;
+            }
+
+            h2 {
+                color: #191919;
+                font-family: 'DM sans', sans-serif;
+                font-weight: 700;
+                font-size: 45px;
+            }
+        }
+
+        .project-cases {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+
+            @media (min-width: 768px) {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .project {
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr;
+                color: #191919;
+                text-decoration: none;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                    transition: transform 0.3s;
+                }
+
+                h3 {
+                    font-family: 'DM sans', sans-serif;
+                    font-weight: 700;
+                    font-size: 22px;
+                    padding-top: 35px;
+                    padding-bottom: 16px;
+                    border-bottom: 1px solid #DAD9D3;
+                }
+
+                &:hover {
+                    img {
+                        transform: scale(1.05);
+						
+                    }
+                }
+
+                // read more button
+                .readmore {
+                    padding: 15px;
+                    margin-right: 15px;
+                    display: block;
+                    text-align: right;
+                    color: #191919;
+                    font-family: 'Inter', sans-serif;
+                    font-size: 14px;
+                    font-weight: 500;
+                    text-decoration: none;
+                    color: #191919;
+                }
+
+                // arrow icon
+                i {
+                    margin-left: 3px;
+                }
+
+                &:hover .readmore {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        // center the All recent projects
+        .center-content {
+            margin-top: 50px;
+            margin-bottom: 90px;
+        }
+    }
+}

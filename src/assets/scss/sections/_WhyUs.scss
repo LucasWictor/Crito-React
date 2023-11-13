@@ -1,0 +1,79 @@
+.Why-us {
+    position: relative;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+
+        .left-content {
+            flex: 1;
+            padding: 20px; 
+
+            .section-title {
+                text-align: left;
+                p {
+                    font-size: 1.2em;
+                }
+                h2 {
+                    font-size: 50px;
+                    padding-right: 150px;
+                }
+            }
+
+            .icon-group {
+                display: flex;
+                align-items: center;
+                gap: 30px;
+                margin-top: 10px;
+
+                .icon {
+                    padding: 10px;
+                    border: 1px solid #b9b9bf;
+                    border-radius: 50%;
+
+                    img {
+                        max-width: 30px;
+                    }
+                }
+
+                .icon-text {
+                    h3 {
+                        font-size: 1.2em;
+                    }
+                    p {
+                        font-size: 1em;
+                    }
+                }
+            }
+        }
+
+        .content-right {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .picbox {
+                position: relative;
+                max-width: 100%; 
+                margin-top: 180px; 
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+
+            .gray-background {
+                content: "";
+                position: absolute;
+                top: 220px;
+                left:-23%;
+				right: 30%;
+                width: 100vw;
+                height: 80%;
+                background-color: #F0EFE9; 
+                z-index: -1; 
+            }
+        }
+    }
+}

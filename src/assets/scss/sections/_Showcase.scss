@@ -1,0 +1,49 @@
+.showcase {
+	background-color: #F0EFE9;
+
+	.container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding-top: 70px;
+
+		.content {
+			h1 {
+				font-family: 'DM Sans, sans-serif';
+				font-weight: 700;
+				font-size: 76px;
+			}
+
+			p {
+				color: #626262;
+				font-size: 20px;
+				padding-top: 35px;
+				padding-bottom: 40px;
+			}
+
+			a {
+				margin-right: 10px;
+				padding-top: 15px;
+			}
+		}
+	}
+
+	img {
+		margin-right: -50px;
+		display: none;
+
+		@media (min-width: 992px) {
+			display: block;
+
+		}
+	}
+
+
+	.Background-lines-right {
+		position: relative;
+		right: 45em;
+		top: 6em; 
+
+	}
+
+}

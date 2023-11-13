@@ -1,0 +1,36 @@
+.newsletter {
+	background-color: #F0EFE9;
+	position: relative;
+	padding-top: 80px;
+	padding-bottom: 80px;
+
+	.Background-wavy-lines {
+		position: absolute;
+		bottom: 50px;
+		right: 0;
+	}
+
+	.container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		h2 {
+			font-family: 'DM sans', sans-serif;
+			font-size: 45px;
+			font-weight: 700;
+		}
+
+		form {
+			input {
+				padding: 15px 30px;
+				font-size: 16px;
+				border-radius: 25px;
+				outline: none;
+				border: 1px solid #DAD9D3;
+				margin-right: 20px;
+			}
+
+		}
+	}
+}

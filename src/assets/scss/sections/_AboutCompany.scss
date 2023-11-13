@@ -1,0 +1,106 @@
+.aboutus-section {
+    .container {
+        .aboutbox {
+            margin-bottom: 50px;
+
+            .featurebox {
+                display: flex;
+                justify-content: space-between;
+                gap: 40px;
+                background-color: #ffffff;
+                transition: 0.3s;
+                flex-direction: column;
+
+                @media (min-width: 992px) {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 200px;
+                }
+
+                .imgbox {
+                    position: relative;
+
+                    .bluebox {
+                        position: absolute;
+                        left: -10%;
+                        bottom: 7%;
+                        background-color: #BEEBFF;
+                        width: 368px;
+                        height: 180px;
+
+                        .toptext {
+                            margin-top: 20px;
+                            margin-left: 20px;
+                            display: flex;
+                            align-items: baseline;
+
+                            h3 {
+                                margin-right: 8px;
+                                color: #191919;
+                            }
+
+                            p {
+                                margin: 0;
+                                color: #F94D1c;
+                            }
+                        }
+                    }
+
+                    .descriptiontext {
+                        margin-left: 20px;
+                        color: #626262;
+                    }
+                }
+
+                .section-title {
+                    text-align: left;
+                    margin-bottom: 10px;
+                    padding: 0;
+                    padding-right: 27px;
+
+                    .aboutcompanytxt {
+                        p {
+                            margin-top: 30px;
+                            margin-bottom: 30px;
+                            color: #626262;
+                        }
+
+                        .btnbrowse {
+                            margin-top: 20px; 
+                            margin-left: 20px; 
+                        }
+                    }
+
+                    .learn-more-and-video {
+                        display: flex;
+                        align-items: center;
+
+                        @media (min-width: 992px) {
+                            margin-top: 20px; 
+                        }
+
+                        .introvideo {
+                            display: flex;
+                            justify-content: flex-end;
+                            margin-right: 20px; 
+                            align-items: center;
+
+                            .playbutton {
+								margin-left: 20px;
+								margin-right: 10px;
+                                font-size: 40px;
+                                color: #191919;
+                            }
+
+                            p {
+                                margin: 0;
+                                color: #000000;
+								font-weight: 600;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

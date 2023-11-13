@@ -11,6 +11,7 @@ import ProjectCases from '@components/ProjectCases'
 import MeetOurTeam from '@components/MeetOurTeam'
 import Testimonial from '@components/Testimonial'
 import ArticlesSection from '@components/ArticlesSection'
+import SignUpNews from '../components/SignUpNews'
 
 
 
@@ -30,6 +31,7 @@ const Home = () => {
     <MeetOurTeam/>
     <Testimonial/>
     <ArticlesSection/>
+    <SignUpNews/>
     <Footer/>
     </>
   )
