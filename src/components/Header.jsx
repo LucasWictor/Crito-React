@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import logotype from '@images/logotype.svg';
 
 function Header() {
@@ -10,11 +11,11 @@ function Header() {
             <i className="fa-solid fa-bars-staggered"></i>
           </button>
           <div className="logotype">
-            <a href="index.html">
+            <NavLink to="/">
               <div className="Image-logotype">
                 <img src={logotype} alt="Showcase image of a man with a tablet" />
               </div>
-            </a>
+            </NavLink>
           </div>
           <div className="contactinformation-bar">
             <div className="content-box">
@@ -45,17 +46,22 @@ function Header() {
           </div>
           <div className="menu">
             <nav>
-              <a className="active" href="index.html">
+              <NavLink to="/" activeClassName="active" exact>
                 Home
-              </a>
-              <a href="services.html">Service</a>
-              <a href="news.html">News</a>
-              <a href="contacts.html">Contact</a>
+              </NavLink>
+              <NavLink to="/services" activeClassName="active">
+                Service
+              </NavLink>
+              <NavLink to="/news" activeClassName="active">
+                News
+              </NavLink>
+              <NavLink to="/contact" activeClassName="active">
+                Contact
+              </NavLink>
             </nav>
-            <a className="btn-yellow" href="login.html">
-              Login
-              <i className="fa-regular fa-arrow-up-right"></i>
-            </a>
+            <NavLink to="/login" className="btn-yellow">
+              Login <i className="fa-regular fa-arrow-up-right"></i>
+            </NavLink>
           </div>
         </div>
       </header>
