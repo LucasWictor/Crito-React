@@ -1,8 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import logotype from '@images/logotype.svg';
 
+
 function Header() {
+  const [loginPopupVisible, setLoginPopupVisible] = useState(false);
+
+  const handleLoginClick = () => {
+    setLoginPopupVisible(!loginPopupVisible);
+  };
+
   return (
     <div className="wrapper-grid">
       <header>
@@ -59,12 +66,29 @@ function Header() {
                 Contact
               </NavLink>
             </nav>
-            <NavLink to="/login" className="btn-yellow">
+            <button onClick={handleLoginClick} className="btn-yellow">
               Login <i className="fa-regular fa-arrow-up-right"></i>
-            </NavLink>
+            </button>
           </div>
         </div>
       </header>
+
+      {loginPopupVisible && (
+        <div className="login-popup">
+          <form>
+            <label htmlFor="username">Username:</label>
+            <input type="text" id="username" />
+
+            <label htmlFor="password">Password:</label>
+            <input type="password" id="password" />
+
+            <button type="submit">Login</button>
+          </form>
+          <button className="close-button" onClick={handleLoginClick}>
+            Close
+          </button>
+        </div>
+      )}
     </div>
   );
 }

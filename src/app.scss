@@ -15,6 +15,8 @@
 @import './assets/scss/sections/Connect';
 @import './assets/scss/sections/ContactBox';
 @import './assets/scss/sections/Contactform';
+@import './assets/scss/sections/LoginPopup';
+
 
 html,body {
   color: #191919;
@@ -61,6 +63,23 @@ html,body {
     font-size: 0.9em;
   }
   .btn-yellow:hover {
+    background-color: #191919;
+    border: 1px solid #191919;
+    color: #F0EFE9;
+  }
+
+  .btn-sub {
+    background-color: #F9D783;
+    border: 1px solid #F9D783;
+    padding: 15px 25px;
+    font-weight: 600;
+    font-size: 14px;
+    border-radius: 25px;
+    color: #191919;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  .btn-sub:hover {
     background-color: #191919;
     border: 1px solid #191919;
     color: #F0EFE9;
