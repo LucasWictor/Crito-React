@@ -594,6 +594,7 @@ header .menu nav a.active::after, header .menu nav a:hover::after {
 
 .articles-section {
   position: relative;
+  margin-bottom: 15px;
 }
 .articles-section .container .section-title {
   text-align: left;
@@ -607,8 +608,8 @@ header .menu nav a.active::after, header .menu nav a:hover::after {
 .articles-section .container .browseteam {
   content: "";
   position: absolute;
-  top: 22%;
-  right: 25%;
+  bottom: 5px;
+  right: 45%;
 }
 .articles-section .container .article-box {
   display: flex;
@@ -620,6 +621,10 @@ header .menu nav a.active::after, header .menu nav a:hover::after {
   width: 30%;
   margin-right: 2%;
   margin-bottom: 20px;
+  transition: height 0.3s ease;
+}
+.articles-section .container .article-box .guide-box:hover .article-pic {
+  transform: scale(1.05);
 }
 .articles-section .container .article-box .guide-box p {
   margin-top: 30px;
@@ -649,12 +654,14 @@ header .menu nav a.active::after, header .menu nav a:hover::after {
 .articles-section .container .article-box .guide-box .article-pic-container .published-corner {
   position: absolute;
   top: 0;
-  right: 0;
-  background-color: yellow;
+  right: 1;
+  margin-left: 10px;
+  margin-top: 10px;
+  background-color: #F0D082;
   color: black;
-  padding: 5px;
-  font-size: 12px;
-  border-radius: 0 0 0 10px; /* Adjust border-radius to fit your design */
+  padding: 15px;
+  font-size: 15px;
+  font-weight: 600;
 }
 .articles-section .container .article-box .guide-box .article-pic-container .published-corner p {
   margin: 0;

@@ -3,8 +3,9 @@ import React, { useState, useEffect } from "react";
 function ArticlesSection({ id }) {
   const [articles, setArticles] = useState([]);
   const [error, setError] = useState(null);
+  const [displayedArticles, setDisplayedArticles] = useState(3);
 
-  //format the date 
+  // format the date
   const getFormattedDate = (dateString) => {
     const options = { month: "short", day: "numeric" };
     return new Date(dateString).toLocaleDateString("sv-se", options);
@@ -27,7 +28,7 @@ function ArticlesSection({ id }) {
 
         // Check if the API request was successful
         if (!response.ok) {
-          throw new Error(`Fel: ${response.status}`);
+          throw new Error(`Error: ${response.status}`);
         }
 
         // Convert to JSON
@@ -44,6 +45,12 @@ function ArticlesSection({ id }) {
     fetchArticles();
   }, [id]);
 
+  //Set displayedArticles to 9 when clicking "See more". If currently 3, it will be set to 9.
+  const toggleArticles = () => {
+    setDisplayedArticles((prev) => (prev === 3 ? 9 : 3));
+  };
+  
+
   return (
     <section className="articles-section">
       <div className="container">
@@ -52,12 +59,13 @@ function ArticlesSection({ id }) {
           <h2>Get Every Single Article & News</h2>
         </div>
         <div className="browseteam">
-          <a className="btn-blank" href="index.html">
-            See more<i className="fa-regular fa-arrow-up-right"></i>
+          <a className="btn-blank" onClick={toggleArticles}>
+            {displayedArticles === 3 ? "See more" : "See less"}
+            <i className="fa-regular fa-arrow-up-right"></i>
           </a>
         </div>
         <div className="article-box">
-          {articles.map((article, index) => (
+          {articles.slice(0, displayedArticles).map((article, index) => (
             <div className="guide-box" key={index}>
               <a href={article.link}>
                 <div className="article-pic-container">
