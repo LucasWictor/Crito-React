@@ -1,16 +1,19 @@
 import { useFormik } from 'formik';
-import React from 'react';
+import React, { useState } from 'react';
 import * as Yup from 'yup';
 
 const ContactForm = () => {
+  const [submitting, setSubmitting] = useState(false);
+  const [submitSuccess, setSubmitSuccess] = useState(false);
+
   const form = useFormik({
     initialValues: {
-      firstName: '',
+      Name: '', 
       email: '',
       Message: '',
     },
     validationSchema: Yup.object({
-      firstName: Yup.string()
+      Name: Yup.string()
         .required('Please enter your first name.')
         .min(2, 'First name must be at least two characters long'),
       email: Yup.string()
@@ -20,11 +23,42 @@ const ContactForm = () => {
         .required('Please enter your message.')
         .min(10, 'Your message must not be empty and at least 20 characters long.'),
     }),
-        
-    // onSubmit: (values) => {
-    //   console.log(values);
-    //   console.log(form.errors);  
-    // },
+    onSubmit: async (values) => {
+        try {
+          setSubmitting(true);
+      
+          // Log the submitted data
+          console.log('Submitting data:', values);
+      
+          // Make a POST request to the API
+          const response = await fetch('https://win23-assignment.azurewebsites.net/api/contactform', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(values),
+          });
+      
+          // Log the response status
+          console.log('Response Status:', response.status);
+      
+          // Check if the form submission was successful
+          setSubmitSuccess(response.ok);
+      
+          if (!response.ok) {
+            // Log error response
+            const errorResponse = await response.text();
+            console.error('Error submitting form. Response:', errorResponse);
+          }
+        } catch (error) {
+          // Log any errors during submission
+          console.error('Error submitting form:', error);
+          setSubmitSuccess(false);
+        } finally {
+          // Set submitting state to false
+          setSubmitting(false);
+        }
+      },
   });
 
   return (
@@ -36,14 +70,15 @@ const ContactForm = () => {
             <h2>for any information.</h2>
           </div>
           <div className="details">
+            {submitSuccess && <p>Your message has been sent!</p>}
             <div>
-              {form.touched.firstName && form.errors.firstName && (
-                <label htmlFor="name">{form.errors.firstName}</label>
+              {form.touched.Name && form.errors.Name && (
+                <label htmlFor="Name">{form.errors.Name}</label>
               )}
               <input
                 type="text"
-                name="firstName"
-                value={form.values.firstName}
+                name="Name"
+                value={form.values.Name}
                 onChange={form.handleChange}
                 onBlur={form.handleBlur}
                 id="name"
@@ -68,7 +103,7 @@ const ContactForm = () => {
             </div>
             <div>
               {form.touched.Message && form.errors.Message && (
-                <label htmlFor="message">{form.errors.Message}</label>
+                <label htmlFor="Message">{form.errors.Message}</label>
               )}
               <textarea
                 name="Message"
@@ -83,8 +118,8 @@ const ContactForm = () => {
               ></textarea>
             </div>
             <div>
-              <button type="submit" className="btn-yellow">
-                send message
+              <button type="submit" className="btn-yellow" disabled={submitting}>
+                {submitting ? 'Sending...' : 'Send Message'}
                 <i className="fa-regular fa-arrow-up-right"></i>
               </button>
             </div>
