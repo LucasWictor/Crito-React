@@ -34,4 +34,14 @@
 
 		}
 	}
+	.form-group {
+		position: relative;
+	  }
+	  .error-message {
+		position: absolute;
+		top: 65%; 
+		left: 60%;
+		font-size: 13px;
+	  }
+	
 }

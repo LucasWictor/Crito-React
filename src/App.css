@@ -731,6 +731,15 @@ header .menu nav a.active::after, header .menu nav a:hover::after {
   border: 1px solid #DAD9D3;
   margin-right: 20px;
 }
+.newsletter .form-group {
+  position: relative;
+}
+.newsletter .error-message {
+  position: absolute;
+  top: 65%;
+  left: 60%;
+  font-size: 13px;
+}
 
 .footer {
   background-color: #0E1021;
@@ -889,8 +898,8 @@ header .menu nav a.active::after, header .menu nav a:hover::after {
   margin-top: 100px;
   border: 1px solid #DAD9D3;
   padding: 45px 25px 60px;
-  display: flex; /* Add flex display */
-  align-items: center; /* Center align vertically */
+  display: flex;
+  align-items: center;
 }
 .about-box .info-boxes img {
   margin-right: 20px;

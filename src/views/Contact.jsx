@@ -3,6 +3,7 @@ import Header from '@components/Header'
 import Connect from '@components/Connect'
 import ContactBox from '@components/ContactBox'
 import Contactform from '@components/Contactform'
+import MapSection from '@components/MapSection'
 import Footer from '@components/Footer'
 
 
@@ -13,6 +14,7 @@ const Contact = () => {
     <Connect />
     <ContactBox />
     <Contactform />
+    <MapSection />
     <Footer />
     </>
   )
