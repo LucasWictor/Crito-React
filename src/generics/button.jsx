@@ -10,7 +10,7 @@ const Button = ({ type, url, title }) => {
       case 'blank':
         return 'btn-blank';
       default:
-        return 'btn-black'; // Provide a default class if type doesn't match any case
+        return 'btn-black'; 
     }
   };
 

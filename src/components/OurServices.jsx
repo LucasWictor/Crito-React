@@ -29,9 +29,9 @@ const OurServices = () => {
           </div>
           <div>
             <img
-               className="backgroundlines"
-               src={backgroundlines} 
-               alt=""
+              //  className="backgroundlines"
+              //  src={backgroundlines} 
+              //  alt=""
             />
           </div>
         </div>

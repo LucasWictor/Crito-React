@@ -33,7 +33,7 @@ const WhyUs = () => {
     <section className="Why-us">
       <div className="container">
         <div className="row">
-          {/* Left Column for Icons and Text */}
+          
           <div className="col-md-6">
             <div className="left-content">
               <div className="section-title">
@@ -54,7 +54,7 @@ const WhyUs = () => {
             </div>
           </div>
 
-          {/* Right Column for Picture */}
+        
           <div className="col-md-6">
             <div className="content-right">
               <div className="picbox">
